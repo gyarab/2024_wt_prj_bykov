@@ -1,0 +1,10 @@
+CompileFlags:
+  Add:
+    - "-I/usr/include/libxml2/"
+    - "-I/usr/include/"
+    - "-lcurl"
+    - "-lxml2"
+    - "-lz"
+    - "-llzma"
+    - "-lm"
+    - "-lsqlite3"
