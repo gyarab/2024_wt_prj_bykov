@@ -2,7 +2,7 @@
 independent search engine, written in C and JS (+ will add Python for user mgmt)
 
 # O vyhledávači
-Vyhledávač (s pracovním názvem NPSW) je plně nezávislý vyhledávač s vlastním crawlerem a serverem podávájícím informace frontendu.
+Vyhledávač (s pracovním názvem NPWS) je plně nezávislý vyhledávač s vlastním crawlerem a serverem podávájícím informace frontendu.
 Crawler prohledává stránky a ukládá informace do dvou databází - databází domén a stránek. Webserver odpovídá na HTTP requesty frontendu a posílá informaci o jenotlivé stránce, potom co jí v databázi našel a uložil počet zhlédnutí.
 Crawler a webserver jsou napsány v jazyce C, frontend je napsán v jazyce JS. Backend pro uživatelské informace je napsán v Pythonu.
 Crawler dodržuje RFC 9309, jinak známý jako "Robots Exclusion Protocol" nebo "robots.txt". Crawler umí sledovat sitemapy, včetně vrstvených. Neumí sledovat komprimované sitemapy (s koncovkou .gz).
@@ -33,3 +33,6 @@ V mobilní verzi je navigace uskutečněna za pomocí dolního panelu. V desktop
 ![results](Wireframes/WF-Desktop.png)
 ### User
 ![user](Wireframes/WF-DesktopUser.png)
+
+# Database schema
+![db schema](DB-Schema/DBS.png)
