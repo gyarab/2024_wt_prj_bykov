@@ -36,3 +36,4 @@ V mobilní verzi je navigace uskutečněna za pomocí dolního panelu. V desktop
 
 # Database schema
 Zadání trochu pozměněno aby seděly požadavky.
+![db schema](DB-Schema/DBS.png)
