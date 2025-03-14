@@ -1,3 +1,4 @@
 httpx
 django>=5
 colorama
+pyyaml
