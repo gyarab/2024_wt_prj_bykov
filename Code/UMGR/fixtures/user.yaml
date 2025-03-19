@@ -1,15 +1,15 @@
--   model: auth.user
-    pk: 1
-    fields:
-        password: pbkdf2_sha256$870000$80VSNiCyVJe6G0AwhwGMeN$4QbGnxskBan/xEiNhUwfH5Gj/CYZrGrP7LDmnBymjmo=
-        last_login: 2025-03-14 10:41:13.407815+00:00
-        is_superuser: true
-        username: admin
-        first_name: ''
-        last_name: ''
-        email: admin@npws.admin
-        is_staff: true
-        is_active: true
-        date_joined: 2025-03-14 10:40:47.446538+00:00
-        groups: []
-        user_permissions: []
+- model: auth.user
+  pk: 1
+  fields:
+    password: pbkdf2_sha256$870000$80VSNiCyVJe6G0AwhwGMeN$4QbGnxskBan/xEiNhUwfH5Gj/CYZrGrP7LDmnBymjmo=
+    last_login: 2025-03-19 20:34:11.115587+00:00
+    is_superuser: true
+    username: admin
+    first_name: ''
+    last_name: ''
+    email: admin@npws.admin
+    is_staff: true
+    is_active: true
+    date_joined: 2025-03-14 10:40:47.446538+00:00
+    groups: []
+    user_permissions: []
