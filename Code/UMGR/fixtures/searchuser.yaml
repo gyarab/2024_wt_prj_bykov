@@ -1,0 +1,8 @@
+- model: main.searchuser
+  pk: 1
+  fields:
+    username: npwsadmin
+    userIconId: -1
+    userDescription: I am a free NPWS user! and admin! yay!!!
+    friends: null
+    recentSearches: reuters,rp,seznam

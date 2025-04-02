@@ -1,0 +1,30 @@
+- model: main.allowedattributelist
+  pk: 1
+  fields:
+    name: country
+    value: czechia
+- model: main.allowedattributelist
+  pk: 2
+  fields:
+    name: country
+    value: poland
+- model: main.allowedattributelist
+  pk: 3
+  fields:
+    name: gender
+    value: male
+- model: main.allowedattributelist
+  pk: 4
+  fields:
+    name: gender
+    value: female
+- model: main.allowedattributelist
+  pk: 5
+  fields:
+    name: gender
+    value: nonbinary
+- model: main.allowedattributelist
+  pk: 6
+  fields:
+    name: country
+    value: germany

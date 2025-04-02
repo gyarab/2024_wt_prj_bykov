@@ -1,0 +1,10 @@
+- model: main.searchuserattributes
+  pk: 1
+  fields:
+    name: gender
+    value: male
+- model: main.searchuserattributes
+  pk: 2
+  fields:
+    name: country
+    value: czechia

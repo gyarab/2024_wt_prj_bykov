@@ -1,0 +1,12 @@
+- model: main.keywordlist
+  pk: 1
+  fields:
+    keyword: rp
+- model: main.keywordlist
+  pk: 2
+  fields:
+    keyword: reuters
+- model: main.keywordlist
+  pk: 3
+  fields:
+    keyword: seznam

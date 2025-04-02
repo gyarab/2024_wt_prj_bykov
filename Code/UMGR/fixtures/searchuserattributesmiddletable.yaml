@@ -1,0 +1,5 @@
+- model: main.searchuserattributesmiddletable
+  pk: 1
+  fields:
+    user: 1
+    attributes: 1

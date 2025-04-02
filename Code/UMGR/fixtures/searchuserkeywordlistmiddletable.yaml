@@ -1,0 +1,5 @@
+- model: main.searchuserkeywordlistmiddletable
+  pk: 1
+  fields:
+    user: 1
+    keywordList: 1
