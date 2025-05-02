@@ -11,11 +11,19 @@
 			<img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Protesto.svg" alt="logo of NPWS" class="img-fluid d-inline-block align-text-top" width="50">
 		</div>
 		<div class="col col-12 col-md-10">
-			<input type="text" style="width: 100%; font-size: calc(1.375rem + 1.5vw);" placeholder="Search with NPWS...">
-		</div>
-		<div class="col col-12 col-md-2">
-			<button class="btn btn-lg btn-outline-primary w-100">Submit</button>
-		</div>
+			<form class="form-inline" method="GET" action="/">
+                <input
+                	name="search"
+	               	value="{{ request.GET.search }}"
+        	    	class="form-control mr-sm-2"
+                	type="search"
+                	placeholder="Search"
+                	aria-label="Search"
+                >
+				<div class="col col-12 col-md-2">
+					<button class="btn btn-lg btn btn-outline-success my-2 my-sm-0">Submit</button>
+				</div>
+			</form>
 	</div>
 	<div class="d-none d-md-block" style="margin-top: 10vh;"></div>
 	<div class="row text-center">
@@ -60,6 +68,18 @@
 	</div>
 </div>
 <hr>
+<div class="container mb-1">
+	<p>
+		Svátek má {{ svatek }} 
+		<br>
+		{% for k in keywordList %}
+			<h2>{{ k.keyword }}</h2>
+			<h4>{{ k.keyword|upper}}</h4>
+		{% empty %}
+			<h2>No results found!</h2>
+		{% endfor %}
+	</p>
+</div>
 <div class="container mb-1">
 	<p> 
 		Trenitalia SpA is the primary train operator of Italy. A subsidiary of Ferrovie dello Stato Italiane, itself partly owned by the Italian government, the company is owned publicly and partly private from a private investors group. It was established in 2000 following a European Union directive on the deregulation of rail transport.

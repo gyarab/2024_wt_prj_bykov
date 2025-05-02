@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import *
+from main.models import *
 
 class SearchUserAdmin(admin.ModelAdmin):
 	list_display = ["username", "userDescription", "recentSearches"]
