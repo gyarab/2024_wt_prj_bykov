@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from main.models import KeywordList
+from main.models import KeywordList, SearchUser, SearchUserAttributes
 
 def getIndex(request):
     kl = KeywordList.objects.all().order_by('keyword')
@@ -18,3 +18,32 @@ def getIndex(request):
     return render (
         request, "main/index.html", context
     )
+
+def getUser(request, id = None):
+    us, me, gotauth = None, None, None
+
+    if id is not None:
+        us = SearchUser.objects.all().get(id=id)
+        me = False
+        gotauth = True
+    else:
+        us = SearchUser.objects.all().get(id=1)
+        me = True
+        gotauth = False
+
+    context = {
+        "gotauth": gotauth,
+        "me": me,
+        "username": us.username,
+        "description": us.userDescription,
+        "friendList": us.friends,
+    }
+
+    return render (
+        request, "main/user.html", context
+    )
+
+def getResults(request):
+    pass
+
+# send request to NPWS webserver, save

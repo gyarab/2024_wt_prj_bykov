@@ -8,3 +8,28 @@
   fields:
     name: country
     value: czechia
+- model: main.searchuserattributes
+  pk: 3
+  fields:
+    name: country
+    value: poland
+- model: main.searchuserattributes
+  pk: 4
+  fields:
+    name: country
+    value: germany
+- model: main.searchuserattributes
+  pk: 5
+  fields:
+    name: country
+    value: slovakia
+- model: main.searchuserattributes
+  pk: 6
+  fields:
+    name: country
+    value: hungary
+- model: main.searchuserattributes
+  pk: 7
+  fields:
+    name: country
+    value: austria

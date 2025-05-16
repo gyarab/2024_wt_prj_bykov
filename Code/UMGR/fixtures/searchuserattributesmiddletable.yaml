@@ -3,3 +3,53 @@
   fields:
     user: 1
     attributes: 1
+- model: main.searchuserattributesmiddletable
+  pk: 2
+  fields:
+    user: 1
+    attributes: 2
+- model: main.searchuserattributesmiddletable
+  pk: 3
+  fields:
+    user: 1
+    attributes: 3
+- model: main.searchuserattributesmiddletable
+  pk: 4
+  fields:
+    user: 1
+    attributes: 4
+- model: main.searchuserattributesmiddletable
+  pk: 5
+  fields:
+    user: 2
+    attributes: 5
+- model: main.searchuserattributesmiddletable
+  pk: 6
+  fields:
+    user: 2
+    attributes: 6
+- model: main.searchuserattributesmiddletable
+  pk: 7
+  fields:
+    user: 2
+    attributes: 7
+- model: main.searchuserattributesmiddletable
+  pk: 8
+  fields:
+    user: 3
+    attributes: 5
+- model: main.searchuserattributesmiddletable
+  pk: 9
+  fields:
+    user: 3
+    attributes: 6
+- model: main.searchuserattributesmiddletable
+  pk: 10
+  fields:
+    user: 3
+    attributes: 7
+- model: main.searchuserattributesmiddletable
+  pk: 11
+  fields:
+    user: 4
+    attributes: 7

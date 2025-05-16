@@ -2,7 +2,31 @@
   pk: 1
   fields:
     username: npwsadmin
-    userIconId: -1
+    userIcon: ''
     userDescription: I am a free NPWS user! and admin! yay!!!
     friends: null
     recentSearches: reuters,rp,seznam
+- model: main.searchuser
+  pk: 2
+  fields:
+    username: npwsuser
+    userIcon: ''
+    userDescription: I am a free NPWS user! yay!!!
+    friends: null
+    recentSearches: test,random,lorem
+- model: main.searchuser
+  pk: 3
+  fields:
+    username: jenicek
+    userIcon: ''
+    userDescription: Jenicek is a free NPWS user! yay!!!
+    friends: null
+    recentSearches: jenicek,marenka,pernicek
+- model: main.searchuser
+  pk: 4
+  fields:
+    username: marenka
+    userIcon: ''
+    userDescription: I have changed my description!
+    friends: null
+    recentSearches: something,else,different

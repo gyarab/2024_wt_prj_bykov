@@ -17,12 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.views.generic import TemplateView
-from main.views import getIndex
+from main.views import getIndex, getUser
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', getIndex),
     path('results', TemplateView.as_view(template_name='main/results.html')),
-	path('user', TemplateView.as_view(template_name='main/user.html')),
+	path('user', getUser),
+    path('user/<int:id>', getUser),
     path('about', TemplateView.as_view(template_name='main/about.html')),
+    path('login', TemplateView.as_view(template_name='main/login.html')),
 ]

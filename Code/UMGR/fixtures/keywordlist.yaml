@@ -1,7 +1,7 @@
 - model: main.keywordlist
   pk: 1
   fields:
-    keyword: rp
+    keyword: rzeczpospolita
 - model: main.keywordlist
   pk: 2
   fields:
@@ -10,3 +10,87 @@
   pk: 3
   fields:
     keyword: seznam
+- model: main.keywordlist
+  pk: 4
+  fields:
+    keyword: seznamzpravy
+- model: main.keywordlist
+  pk: 5
+  fields:
+    keyword: prima
+- model: main.keywordlist
+  pk: 6
+  fields:
+    keyword: novinky
+- model: main.keywordlist
+  pk: 7
+  fields:
+    keyword: idnes
+- model: main.keywordlist
+  pk: 8
+  fields:
+    keyword: bbc
+- model: main.keywordlist
+  pk: 9
+  fields:
+    keyword: cnbc
+- model: main.keywordlist
+  pk: 10
+  fields:
+    keyword: bloomberg
+- model: main.keywordlist
+  pk: 11
+  fields:
+    keyword: ctk
+- model: main.keywordlist
+  pk: 12
+  fields:
+    keyword: ct24
+- model: main.keywordlist
+  pk: 13
+  fields:
+    keyword: gazetawyborcza
+- model: main.keywordlist
+  pk: 14
+  fields:
+    keyword: wpolityce
+- model: main.keywordlist
+  pk: 15
+  fields:
+    keyword: polsat
+- model: main.keywordlist
+  pk: 16
+  fields:
+    keyword: tvn
+- model: main.keywordlist
+  pk: 17
+  fields:
+    keyword: tvp
+- model: main.keywordlist
+  pk: 18
+  fields:
+    keyword: aktualne
+- model: main.keywordlist
+  pk: 19
+  fields:
+    keyword: deutschewelle
+- model: main.keywordlist
+  pk: 20
+  fields:
+    keyword: msnbc
+- model: main.keywordlist
+  pk: 21
+  fields:
+    keyword: skynews
+- model: main.keywordlist
+  pk: 22
+  fields:
+    keyword: aljazeera
+- model: main.keywordlist
+  pk: 23
+  fields:
+    keyword: euronews
+- model: main.keywordlist
+  pk: 24
+  fields:
+    keyword: reuters

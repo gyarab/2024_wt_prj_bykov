@@ -1,20 +1,58 @@
 {% extends 'main/base.html' %}
 
 {% block mainSiteContent %}
-<div class="container">
+<div class="container ">
 	<div class="container mb-1">
 		<div class="row">
+			{% if gotauth %}
 			<div class="col-12 col-sm-12 col-md-4 col-lg-4 ">
 				<p> 
-					Future user settings page.
+					<h5>User icon</h5>
+					<img src="https://placehold.co/256x256/008000/ffffff" class="mx-auto d-block img-fluid w-100" alt="Responsive image">
 				</p>
 			</div>
 			<div class="col-12 col-sm-12 col-md-8 col-lg-8">
 				<p>
-					Will have stuff at some point.
+					<h5>Username</h5>
+					<br>
+					{{ username }}
+					<button class="btn btn-sm btn btn-outline-success">Edit</button>
+					<hr>
+					<h5>Description</h5>
+					<br>
+					{{ description }}
+					<button class="btn btn-sm btn btn-outline-success">Edit</button>
+					<hr>
+					<h5>Friends list</h5>
+					<br>
+					{% for f in friendList %}
+						<em>{{ f.name }}</em>
+						<br>
+						{% if me %}
+						<button class="btn btn-success-outline btn-sm">Add more</button>
+						{% endif %}
+						{% empty %}
+						<em>No friends :/</em>
+						<br>
+						{% if me %}
+						<button class="btn btn-success btn-sm">Find some friends</button>
+						{% endif %}
+					{% endfor %}
+					<hr>
 				</p>
 			</div>
+			{% else %}
+				<div class="col-12 col-sm-12 col-md-4 col-lg-4 text-center">
+					<p> 
+						<h5>Not logged in!</h5>
+						<button class="btn btn-success btn-sm" onclick="window.location.href='/login'">Log in</button>
+					</p>
+				</div>
+			{% endif %}
 		</div>
 	</div>
 </div>
 {% endblock %}
+
+<!-- TODO -->
+<!-- user icon change, user description change, display data (email and passwd) -->

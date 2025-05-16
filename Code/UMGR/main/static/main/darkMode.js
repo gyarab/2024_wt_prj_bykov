@@ -12,8 +12,12 @@ function darkModeToggle() {
 	console.log("DMT");
 	darkModeToggleValue = !darkModeToggleValue;
 
-	if(darkModeToggleValue) document.documentElement.setAttribute("data-bs-theme", "dark");
-	else document.documentElement.setAttribute("data-bs-theme", "light");
+	if(darkModeToggleValue) {
+		document.documentElement.setAttribute("data-bs-theme", "dark");
+	}
+	else {
+		document.documentElement.setAttribute("data-bs-theme", "light");
+	}
 
 	darkModeHover();
 	hoverOn = !hoverOn; //toggle back

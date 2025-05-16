@@ -3,3 +3,38 @@
   fields:
     user: 1
     keywordList: 1
+- model: main.searchuserkeywordlistmiddletable
+  pk: 2
+  fields:
+    user: 1
+    keywordList: 2
+- model: main.searchuserkeywordlistmiddletable
+  pk: 3
+  fields:
+    user: 1
+    keywordList: 3
+- model: main.searchuserkeywordlistmiddletable
+  pk: 4
+  fields:
+    user: 1
+    keywordList: 4
+- model: main.searchuserkeywordlistmiddletable
+  pk: 5
+  fields:
+    user: 2
+    keywordList: 5
+- model: main.searchuserkeywordlistmiddletable
+  pk: 6
+  fields:
+    user: 2
+    keywordList: 6
+- model: main.searchuserkeywordlistmiddletable
+  pk: 7
+  fields:
+    user: 2
+    keywordList: 7
+- model: main.searchuserkeywordlistmiddletable
+  pk: 8
+  fields:
+    user: 3
+    keywordList: 5

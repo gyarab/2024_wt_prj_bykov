@@ -14,7 +14,7 @@ def validateUsername(value):
 
 class SearchUser(models.Model):
     username = models.CharField(null=False, blank=False, max_length=64, validators=[validateUsername])
-    userIconId = models.BigIntegerField(null=True, blank=False, default=-1)
+    userIcon = models.CharField(blank=True, default="", max_length=2000)
     userDescription = models.TextField(blank=True, default="I am a free NPWS user!")
     # attrib ids from middle table
     friends = models.ForeignKey("self", blank=True, null=True, on_delete=models.SET_NULL) #attrib to self
@@ -22,7 +22,7 @@ class SearchUser(models.Model):
     # keyword from middle table
 
     def __str__(self):
-        return f"{self.username} {self.userIconId} ({self.userDescription}) recently searched {self.recentSearches}"
+        return f"{self.username} ({self.userDescription}) recently searched {self.recentSearches}"
 
 class KeywordList(models.Model):
     keyword = models.CharField(null=False, blank=False, max_length=30)

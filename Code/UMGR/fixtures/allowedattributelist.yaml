@@ -28,3 +28,58 @@
   fields:
     name: country
     value: germany
+- model: main.allowedattributelist
+  pk: 7
+  fields:
+    name: country
+    value: slovakia
+- model: main.allowedattributelist
+  pk: 8
+  fields:
+    name: country
+    value: hungary
+- model: main.allowedattributelist
+  pk: 9
+  fields:
+    name: country
+    value: austria
+- model: main.allowedattributelist
+  pk: 10
+  fields:
+    name: country
+    value: switzerland
+- model: main.allowedattributelist
+  pk: 11
+  fields:
+    name: country
+    value: ukraine
+- model: main.allowedattributelist
+  pk: 12
+  fields:
+    name: country
+    value: slovakia
+- model: main.allowedattributelist
+  pk: 13
+  fields:
+    name: country
+    value: croatia
+- model: main.allowedattributelist
+  pk: 14
+  fields:
+    name: country
+    value: serbia
+- model: main.allowedattributelist
+  pk: 15
+  fields:
+    name: country
+    value: bulgaria
+- model: main.allowedattributelist
+  pk: 16
+  fields:
+    name: country
+    value: romania
+- model: main.allowedattributelist
+  pk: 17
+  fields:
+    name: country
+    value: latvia
