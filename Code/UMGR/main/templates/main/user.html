@@ -29,16 +29,15 @@
 						<em>{{ f.name }}</em>
 						<br>
 						{% if me %}
-						<button class="btn btn-success-outline btn-sm">Add more</button>
+						<button class="btn btn-outline-success btn-sm">Add more</button>
 						{% endif %}
 						{% empty %}
 						<em>No friends :/</em>
 						<br>
 						{% if me %}
-						<button class="btn btn-success btn-sm">Find some friends</button>
+						<button class="btn btn-outline-success btn-sm">Find some friends</button>
 						{% endif %}
 					{% endfor %}
-					<hr>
 				</p>
 			</div>
 			{% else %}
@@ -49,6 +48,10 @@
 					</p>
 				</div>
 			{% endif %}
+			<hr>
+			<div class="container">
+				<button class="btn btn-outline-success btn-sm w-100" onclick="window.location.href='/userlist'">Go back to list of users</button>
+			</div>
 		</div>
 	</div>
 </div>

@@ -29,14 +29,27 @@
                         <a class="nav-link" href="/" id="ssg-page-name-home" aria-current="page">Home</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="user" id="ssg-page-name-link">Settings</a>
+                        <a class="nav-link" href="/user" id="ssg-page-name-link">Settings</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="about" id="ssg-page-name-link">About</a>
+                        <a class="nav-link" href="/about" id="ssg-page-name-link">About</a>
+                      </li>
+					  <li class="nav-item">
+                        <a class="nav-link" href="/userlist" id="ssg-page-name-link">
+							List of all users
+						</a>
                       </li>
                     </ul>
                 </div>
 				<ul class="navbar-nav ms-auto mb-2 mb-lg-0 mx-3">
+					<li class="nav-item">
+						{% if gotauth %}
+						{% else %}
+						<a class="nav-link" href="/login" id="ssg-page-name-link">
+							<b>Login</b>
+						</a>
+						{% endif %}
+					</li>
 					<li 
 						class="nav-item btn"
 						type="button"

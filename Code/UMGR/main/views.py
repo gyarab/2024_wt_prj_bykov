@@ -1,5 +1,29 @@
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 from main.models import KeywordList, SearchUser, SearchUserAttributes
+from django.views.decorators.csrf import csrf_exempt
+
+@csrf_exempt
+def logIn(request):
+    if request.method == "GET":
+        print(request.POST)
+        return render (
+            request, "main/login.html", {}
+        )
+    elif request.method == "POST":
+        u = request.POST.get("username")
+        p = request.POST.get("password")
+
+        # INCOMPLETE - dont want to use plaintext passwords
+
+        users = SearchUser.objects.all().get(username=u)
+        if users is not None:
+            print(users)
+            return HttpResponse(status=202)
+        else:
+            return HttpResponse(status=403)
+    
+    return HttpResponse(status=400)
 
 def getIndex(request):
     kl = KeywordList.objects.all().order_by('keyword')
@@ -41,6 +65,17 @@ def getUser(request, id = None):
 
     return render (
         request, "main/user.html", context
+    )
+
+def getUserlist(request):
+    us = SearchUser.objects.all().order_by('username')
+
+    context = {
+        "userList": us,
+    }
+
+    return render (
+        request, "main/userlist.html", context
     )
 
 def getResults(request):

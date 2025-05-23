@@ -1,0 +1,25 @@
+{% extends 'main/base.html' %}
+
+{% block mainSiteContent %}
+    {% for u in userList %}
+        <div class="card mx-auto mt-3">
+            <div class="row">
+                <div class="col-6 col-lg-8 col-xl-9">
+                    <h3 class="p-2">{{ u.username }}</h3>
+                </div>
+                <div class="col-6 col-lg-4 col-xl-3 mb-0">
+                    <button 
+                        onclick="window.location.href=`{% url 'user' id=u.pk %}`"
+                        class="btn btn-outline-success btn-sm w-100">
+                        <h4>View profile</h4>
+                    </button>
+                </div>
+            </div>
+            <hr class="mt-0">
+            <p class="ms-2 me-2">{{ u.userDescription }}</p>
+        </div>
+        {% empty %}
+        <em>No friends :/</em>
+        <br>
+    {% endfor %}
+{% endblock %}
