@@ -1,0 +1,51 @@
+services:
+  web:
+    restart: unless-stopped
+    build: .
+    pull_policy: build
+    # ports:
+    #   - 8000:80
+    volumes:
+      - ./Code/UMGR:/app
+
+    labels:
+      - "traefik.enable=true"
+
+      - "traefik.http.routers.wt-martin-http.rule=Host(`martin.gawt.dtcloud.cz`)"
+      - "traefik.http.routers.wt-martin-http.entrypoints=web"
+      - "traefik.http.routers.wt-martin-http.middlewares=wt-martin-redirect-https@docker"
+
+      - "traefik.http.middlewares.wt-martin-redirect-https.redirectscheme.scheme=https"
+      - "traefik.http.middlewares.wt-martin-redirect-https.redirectscheme.permanent=true"
+
+      - "traefik.http.routers.wt-martin-https.rule=Host(`martin.gawt.dtcloud.cz`)"
+      - "traefik.http.routers.wt-martin-https.entrypoints=websecure"
+      - "traefik.http.routers.wt-martin-https.tls=true"
+      - "traefik.http.routers.wt-martin-https.tls.certresolver=letsencrypt"
+
+  static:
+    image: nginx:alpine
+    restart: unless-stopped
+
+    volumes:
+      - ./Code/UMGR/main/staticfiles:/usr/share/nginx/html/static:ro
+
+    labels:
+      - "traefik.enable=true"
+
+      - "traefik.http.routers.wt-martin-static-http.rule=Host(`martin.gawt.dtcloud.cz`) && PathPrefix(`/static`)"
+      - "traefik.http.routers.wt-martin-static-http.entrypoints=web"
+      - "traefik.http.routers.wt-martin-static-http.middlewares=wt-martin-static-redirect-https@docker"
+
+      - "traefik.http.middlewares.wt-martin-static-redirect-https.redirectscheme.scheme=https"
+      - "traefik.http.middlewares.wt-martin-static-redirect-https.redirectscheme.permanent=true"
+
+      - "traefik.http.routers.wt-martin-static-https.rule=Host(`martin.gawt.dtcloud.cz`) && PathPrefix(`/static`)"
+      - "traefik.http.routers.wt-martin-static-https.entrypoints=websecure"
+      - "traefik.http.routers.wt-martin-static-https.tls=true"
+      - "traefik.http.routers.wt-martin-static-https.tls.certresolver=letsencrypt"
+
+networks:
+  default:
+    name: proxy
+    external: true

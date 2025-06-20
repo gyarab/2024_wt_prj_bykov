@@ -1,20 +1,22 @@
-FROM python:3.13-slim
+FROM python:3.13
 
-ENV PYTHONDONTWRITEBYTECODE=1
-ENV PYTHONUNBUFFERED=1 
+COPY ./requirements.txt /
+RUN pip install --upgrade pip uwsgi
+RUN pip install -r /requirements.txt
 
-RUN mkdir /npws
-WORKDIR /npws
+ARG UID=1000
+ARG GID=1000
 
-RUN pip install --upgrade pip
-COPY requirements.txt /npws/
-RUN pip install -r requirements.txt
+RUN groupadd -g "${GID}" admin \
+    && useradd --create-home --no-log-init -u "${UID}" -g "${GID}" admin
 
-COPY . /npws/
+COPY ./start.sh /
 
-EXPOSE 8002
+WORKDIR /app
+USER admin
 
-CMD ["python", "manage.py", "makemigrations", "main"]
-CMD ["python", "manage.py", "migrate", "main"]
+EXPOSE 80
+VOLUME [ "/data", "/app" ]
 
-CMD ["python", "manage.py", "runserver", "0:0:0:0:8002"]
+ENTRYPOINT [ "/start.sh" ]
+CMD [ "uwsgi" ]
